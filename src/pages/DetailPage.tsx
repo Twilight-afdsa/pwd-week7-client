@@ -86,7 +86,9 @@ function DetailPage() {
       
       <h1>{restaurant.name}</h1>
       
-      <RestaurantImage src={restaurant.image} alt={restaurant.name} />
+      {/* //week7에 수정함. 이미지 값이 있을 때만 이미지를 그리고, 빈 문자열이면 아무것도 그리지 않는다. */}
+      {/* // 경고문 없음. */}
+      {restaurant.image && <RestaurantImage src={restaurant.image} alt={restaurant.name} />}
       
       <InfoSection>
         <h3>기본 정보</h3>
